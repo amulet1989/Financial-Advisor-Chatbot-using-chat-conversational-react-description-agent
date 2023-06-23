@@ -1,6 +1,6 @@
 # Financial Advisor Chatbot
 
-## Final project for the degree of ML engineer at [Anyone AI](https://www.linkedin.com/school/anyone-ai/) bootcamp.
+## Demo project developed for [Anyone AI](https://www.linkedin.com/school/anyone-ai/).
 
 ### Team members:
 
@@ -11,9 +11,6 @@
 + [Sebastian Lugo](https://www.linkedin.com/in/jhoan-sebastian-lugo-ruiz-8577b01b6/)
 
 + [Alejandro León](https://www.linkedin.com/in/jose-alejandro-leon-andrade-88249ab2)
-
-### Mentor:
-+ [Claudio A. Gauna](https://www.linkedin.com/in/claudio-andres-gauna-2b697b97/)
 
 # ABSTRACT
 In this project, we created a chatbot acting as a financial advisor enable to answer questions related to public companies listed in NASDAQ. The bot uses a conversational Agent to coordinate chains of thoughts inserted in ChatGPT through its API, and has access to a database with around ~10.000 public financial documents and news from internet sources to provide users with reliable and accurate answers. All documents were preprocessed and indexed in an Elastiserach document store, and the search is done with the sparse retriever BM25 paired with a Sentence Transformers Ranker. BM25 is fast and lightweight, however, it is not sensitive to word order, nither to the semantics of the text but rather treats text as a bag of words. By placing a Ranker afterward we were able to offset this weakness and have a better-sorted list of relevant documents. The model was tested with **50** questions related to 10 different companies, obtaining an effectiveness of **82%** of correct answers, **12%** of not found answers and only **6%** of incorrect answers. The incorrect answers are all associated with obtaining contexts related to the user's question but from different periods than the one requested in the query. In addition, most of the answers not found or wrongly answered could be solved by slightly modifying the question asked or providing more details to the bot. 
